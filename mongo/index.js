@@ -19,6 +19,7 @@ let UserSchema = mongoose.Schema({ //회원
 });
 
 let ReservationSchema = mongoose.Schema({ //예약
+    vertified: { type: String, default: 'no' },
     school_token: { type: String },
     user_email: { type: String }
 });

@@ -1,5 +1,3 @@
-import config from '../../config';
-
 module.exports = (app, Reservations) => {
     app.post('/setReservation', async(req, res) => {
         let reservation = new Reservations(req.body);

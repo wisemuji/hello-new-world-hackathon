@@ -32,4 +32,5 @@ app.listen(PORT, function() {
 require('./routes/auth/auth')(app, Users);
 require('./routes/reservation/getReservation')(app, Reservations);
 require('./routes/reservation/setReservation')(app, Reservations);
+require('./routes/reservation/sendEmail')(app, Reservations);
 require('./routes/index')(app);
