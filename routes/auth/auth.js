@@ -15,15 +15,11 @@ module.exports = (app, Users) => {
         .post('/signin', async(req, res) => {
             var result = await Users.findOne(req.body)
             if (!result) {
-                res.status(400).json({
-                    message: "login failed"
-                });
+                res.send('<script type="text/javascript">alert("아이디 혹은 비밀번호가 맞지 않습니다."); history.back();</script>');
             } else {
                 req.session.logined = true;
                 req.session.user_id = result.id;
-                res.status(200).json({
-                    message: "success"
-                });
+                res.send('<script type="text/javascript">alert("환영합니다."); location.href = "/";</script>');
             }
         })
         .post('/delUser', async(req, res) => {
