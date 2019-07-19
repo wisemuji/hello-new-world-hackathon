@@ -7,7 +7,7 @@ module.exports = (app) => {
         const page = req.params.page;
         console.log(page);
         if(page == 'index') res.redirect('/');
-        else if(page == 'form'||page == 'join'||page == 'login'||page == 'root'){
+        else if(page == 'form'||page == 'signup'||page == 'login'||page == 'root'){
             res.render(page + '');
         } 
         else {

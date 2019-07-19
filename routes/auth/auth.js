@@ -10,7 +10,7 @@ module.exports = (app, Users) => {
                 if (e instanceof ValidationError) return res.status(400).json({ message: e.message });
                 if (e instanceof paramsError) return res.status(400).json({ message: e.message });
             }
-            res.status(200).send(user)
+            res.send('<script type="text/javascript">alert("회원가입이 완료되었습니다."); location.href = "/";</script>');
         })
         .post('/signin', async(req, res) => {
             var result = await Users.findOne(req.body)
@@ -19,7 +19,7 @@ module.exports = (app, Users) => {
             } else {
                 req.session.logined = true;
                 req.session.user_id = result.id;
-                res.send('<script type="text/javascript">alert("환영합니다."); location.href = "/";</script>');
+                res.send('<script type="text/javascript"> location.href = "/";</script>');
             }
         })
         .post('/delUser', async(req, res) => {
