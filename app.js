@@ -21,7 +21,7 @@ app.use(express.session({
 }));
 
 //module setting
-import { Users } from './mongo';
+import { Users, Reservations, Schools } from './mongo';
 
 //서버 실행
 const PORT = config.PORT || 9000;
@@ -30,4 +30,6 @@ app.listen(PORT, function() {
 });
 
 require('./routes/auth/auth')(app, Users);
+require('./routes/reservation/getReservation')(app, Reservations);
+require('./routes/reservation/setReservation')(app, Reservations);
 require('./routes/index')(app);
