@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자</title>
+    <link rel="stylesheet" href="root.css" />
+</head>
+<body>
+
+    <nav class="topmenu">
+        <ul>
+            <li class="home">개교기념</li>
+            <li><a href="#">방학</a></li>
+            <li><a href="#">개학</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </nav>
+    
+    
+    <div class="rectangle">
+        <%item.forEach(function(element){%>
+        <div class="reservation">
+            <div class="login"><%=element.school_name%></div>    
+            <div class="login_explain">이용 방법: <%=element.out_or_in%></div>
+            <div class="login_explain">예약자: <%=element.user_name%>(<%=element.user_email%>)</div>
+            <div class="login_explain">예약 정보: <%=element.people%>명</div>
+            <div class="login_explain">사용 기간: <%=element.start_date%> - <%=element.end_date%></div>
+        </div>
+        <%})%>
+    </div>
+
+</body>
+</html>

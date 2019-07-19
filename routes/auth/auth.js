@@ -10,7 +10,7 @@ module.exports = (app, Users) => {
                 if (e instanceof ValidationError) return res.status(400).json({ message: e.message });
                 if (e instanceof paramsError) return res.status(400).json({ message: e.message });
             }
-            res.send('<script type="text/javascript">alert("회원가입이 완료되었습니다."); location.href = "/";</script>');
+            res.send('<script type="text/javascript">alert("회원가입이 완료되었습니다."); location.href = "/index";</script>');
         })
         .post('/signin', async(req, res) => {
             var result = await Users.findOne(req.body)
@@ -18,8 +18,8 @@ module.exports = (app, Users) => {
                 res.send('<script type="text/javascript">alert("아이디 혹은 비밀번호가 맞지 않습니다."); history.back();</script>');
             } else {
                 req.session.logined = true;
-                req.session.user_id = result.id;
-                res.send('<script type="text/javascript"> location.href = "/";</script>');
+                req.session.user_id = result.email;
+                res.send('<script type="text/javascript"> location.href = "/index";</script>');
             }
         })
         .post('/delUser', async(req, res) => {
@@ -31,7 +31,7 @@ module.exports = (app, Users) => {
             var result = await Users.find()
             res.send(result)
         })
-        .post('/logout', (req, res) => {
+        .get('/logout', (req, res) => {
             var result = req.session.destroy();
             res.clearCookie(config.key);
             res.send(result)

@@ -15,17 +15,22 @@ db.once('open', function callback() { console.log("Mongo On"); });
 
 let UserSchema = mongoose.Schema({ //회원
     email: { type: String }, //이메일
-    password: { type: String }, //비밀번호
+    password: { type: String } //비밀번호
 });
 
 let ReservationSchema = mongoose.Schema({ //예약
     vertified: { type: String, default: 'no' },
-    school_token: { type: String },
-    user_email: { type: String }
+    school_name: { type: String },
+    out_or_in: { type: String },
+    user_name: { type: String },
+    user_email: { type: String },
+    people: { type: String },
+    start_date: { type: String },
+    end_date: { type: String }
 });
 
 let SchoolSchema = mongoose.Schema({ //예약
-    token: { type: String },
+    name: { type: String },
     id: { type: String }, //ID
     password: { type: String } //비밀번호
 });
