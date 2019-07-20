@@ -41,7 +41,8 @@ html {
 
 /* Nav */
 .topmenu {
-  height: 50px;
+  height: 50px;    
+  position: fixed;
 }
 
 li {
@@ -115,7 +116,7 @@ a:hover {
 }
 
 .apply_btn {
-  position: absolute;
+  position: fixed;
   left: 250px;
   top: 450px;
   width: 220px;
