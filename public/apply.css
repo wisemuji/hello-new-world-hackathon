@@ -1,0 +1,122 @@
+/* ALL */
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@keyframes click-wave {
+    0% {
+      height: 40px;
+      width: 40px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+html { 
+    background: url("pic/explain_background.png") no-repeat center center fixed; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+
+    font-family: NotoSansKR;
+    color: #ffffff;
+}
+
+/* Nav */
+.topmenu {
+    height: 50px;
+}
+ul{
+    margin-left: 50px;
+}
+
+li {
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #ffffff;
+    line-height: 30px;
+    font-size: 1.1em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 7px solid #ffffff;
+}
+
+.home {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* 검은 박스 */
+.black_box{
+    position: absolute;
+    top: 0px;
+    left: 900px;
+    width: 700px;
+    height: 1466px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+  /*예약자*/
+
+  .near{
+      margin-top: 60px;
+      margin-left: 100px;
+  }
+
+  .near hr{
+      margin-left: 10px;
+      display: inline-block;
+      width: 450px;
+      vertical-align : middle;
+  }
+
+  .explain{
+    margin: 60px;
+  }
+
+  .txt{
+    margin-top: 30px;
+    line-height: 25px;
+  }
+
+  .apply_btn{
+    position: absolute;
+    left: 250px;
+    top: 450px;
+    width: 220px;
+    padding: 10px;
+    background: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+
+  .apply_btn:hover{
+    position: absolute;
+    left: 250px;
+    top: 450px;
+    width: 220px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #272727;
+  }

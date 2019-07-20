@@ -1,0 +1,280 @@
+/* ALL */
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@keyframes click-wave {
+    0% {
+      height: 40px;
+      width: 40px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+  }
+  *{
+      margin: 0;
+      padding: 0;
+  }
+
+html { 
+    background: url("pic/explain_background.png") no-repeat center center fixed; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+
+    font-family: NotoSansKR;
+    color: #ffffff;
+}
+
+/* Nav */
+.topmenu {
+    height: 50px;
+}
+
+li{
+    font-size: 20px;
+    float: left;
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 30px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    border-bottom: 3px solid #ffffff;
+}
+ul{
+    margin-left: 50px;
+}
+
+.home{
+    font-size: 30px;
+    font-weight: 700; 
+    margin-left: 140px; 
+}
+
+/* 검은 박스 */
+.black_box{
+    position: absolute;
+    top: 0px;
+    left: 900px;
+    width: 700px;
+    height: 1466px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* 체크 박스 */
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+  }
+  .option-input:hover {
+    background: #9fa1a3;
+  }
+  .option-input:checked {
+    background: rgb(39, 38, 38);
+  }
+  .option-input:checked::before {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 16.66667px;
+    text-align: center;
+    line-height: 25px;
+  }
+  .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #ffffff;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+
+
+  .outoutout{
+      margin-left: 30px;
+  }
+
+  .option-input{
+      margin-right: 20px;
+  }
+
+  .black_box label{
+    vertical-align : middle;
+  }
+
+  .outorin{
+    margin-top: 100px;
+    margin-left: 120px;
+  }
+
+  /*예약자*/
+
+.reservepeople{
+    margin-top: 60px;
+    margin-left: 120px;
+}
+
+.reservepeople hr{
+    margin-left: 10px;
+    display: inline-block;
+    width: 400px;
+    vertical-align : middle;
+}
+
+.name_input{
+    margin-top: 40px;
+    margin-left: 17px;
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    background: transparent;
+    border: solid 3px #f5f5f5;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+
+.email_input{
+    margin-top: 40px;
+    margin-left: 17px;
+    display: inline-block;
+    width: 230px;
+    height: 30px;
+    background: transparent;
+    border: solid 3px #f5f5f5;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.nameandemail{
+    margin-left: 105px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.su_input{
+    margin-top: 40px;
+    margin-left: 17px;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background: transparent;
+    border: solid 3px #f5f5f5;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+
+.date_date{
+    margin-top: 40px;
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    border: solid 3px #f5f5f5;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*방*/
+.bang{
+    margin-top: 70px;
+    margin-left: 60px;
+}
+
+.bang div{
+    display: inline-block;
+    border-radius: 100%;
+    width: 110px;
+    height: 110px;
+    background-color: none;
+    border: 3px solid white;
+    text-align: center;
+    line-height: 110px;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+}
+
+.bang div:hover{
+    background-color: white;
+    color: black;
+}
+
+/*구매방법*/
+
+.howbuy{
+    margin-top: 70px;
+    margin-left: 60px;
+}
+
+.howbuy div{
+    display: inline-block;
+    border-radius: 10px;
+    width: 250px;
+    height: 100px;
+    background-color: none;
+    border: 3px solid white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.howbuy div:hover{
+    background-color: white;
+    color: black;
+}
+
+.login_btn{
+    margin: 40px auto;
+    width: 545px;
+    height: 64px;
+    background-color: #ffffff;
+    font-size: 20px;
+}

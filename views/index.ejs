@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body style="overflow-x:hidden">
+    <nav class="topmenu">
+            <ul>
+                <li class="home"><a href="/">개교기념</a></li>
+                <li><a href="/#bang">방학</a></li>
+                <li><a href="/#gae">개학</a></li>
+                <%if(!id){%>
+                <li><a href="login">로그인</a></li>
+                <li><a href="signup">회원가입</a></li>
+                <% } else { %>
+                <li><a href="logout">로그아웃</a></li>
+                <%}%>
+            </ul>
+    </nav>
+
+    <div class="gradi">
+        <img src="assets/yayaya.png" class="logo">
+        <center>
+        <div class="reason">
+            헌 학교에서 새 학교로 <br>
+            우리의 재능을 상품으로 <br>
+            교육의 배움터를 숙박시설로 
+        </div>
+        </center>
+        <div class="vacation">
+            <div class="vaca_title" id="bang">방학식</div>
+            <div class="school1">
+                <div><img src="assets/폐교2.jpg"></div>
+                <button onclick="location.href='apply' ">알아보기</button>
+            </div>
+            <div class="school2">
+                <div><img src="assets/폐교3.jpg"></div>
+                <button onclick="location.href='apply' ">알아보기</button>
+            </div>
+            <div class="school3">
+                <div><img src="assets/폐교4.jpg"></div>
+                <button onclick="location.href='apply' ">알아보기</button>
+            </div>
+            <div class="school4">
+                <div><img src="assets/폐교5.jpg"></div>
+                <button onclick="location.href='apply' ">알아보기</button>
+            </div>
+        </div>
+
+        <div class="go">
+                <div class="vaca_title" id="gae">개학식</div>
+                <div class="school5">
+                    <div><img src="assets/폐교2.jpg"></div>
+                    <button onclick="location.href='reservation' ">알아보기</button>
+                </div>
+                <div class="school6">
+                    <div><img src="assets/폐교3.jpg"></div>
+                    <button onclick="location.href='reservation' ">알아보기</button>
+                </div>
+                <div class="school7">
+                    <div><img src="assets/폐교4.jpg"></div>
+                    <button onclick="location.href='reservation' ">알아보기</button>
+                </div>
+                <div class="school8">
+                    <div><img src="assets/폐교5.jpg"></div>
+                    <button onclick="location.href='reservation' ">알아보기</button>
+                </div>
+    </div>
+
+</body>
+
+</html>

@@ -8,13 +8,17 @@
 <body>
 
     <nav class="topmenu">
-        <ul>
-            <li class="home">개교기념</li>
-            <li><a href="#">방학</a></li>
-            <li><a href="#">개학</a></li>
-            <li><a href="#">로그인</a></li>
-            <li><a href="#">회원가입</a></li>
-        </ul>
+            <ul>
+                <li class="home"><a href="/">개교기념</a></li>
+                <li><a href="/#bang">방학</a></li>
+                <li><a href="/#gae">개학</a></li>
+                <%if(!id){%>
+                <li><a href="login">로그인</a></li>
+                <li><a href="signup">회원가입</a></li>
+                <% } else { %>
+                <li><a href="logout">로그아웃</a></li>
+                <%}%>
+            </ul>
     </nav>
     
     
@@ -26,9 +30,25 @@
             <div class="login_explain">예약자: <%=element.user_name%>(<%=element.user_email%>)</div>
             <div class="login_explain">예약 정보: <%=element.people%>명</div>
             <div class="login_explain">사용 기간: <%=element.start_date%> - <%=element.end_date%></div>
+            <div class="login_explain">예약 승인여부: <%=element.vertified%></div>
+            <button class="apply_btn" onclick="sendEmail('<%=element.user_email%>');">예약 승인하기</button>
         </div>
         <%})%>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        function sendEmail(email) {
+            console.log("ㅎ이")
+            $.post("sendEmail", {email:email}, function(res, status){
+                if(res){
+                    alert("이메일 전송에 성공하였습니다.");
+                    location.href('root');
+                } else {
+                    alert("이메일 전송에 실패하였습니다.");
+                }
+            });
+        };
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,170 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url(assets/bg.png) no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+ul{
+    margin-left: 50px;
+}
+
+li {
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #ffffff;
+    line-height: 30px;
+    font-size: 1.1em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 7px solid #ffffff;
+}
+
+.home {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.gradi{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('assets/gra.png');
+    height: 2000px ; 
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.vacation{
+    position: absolute;
+    top: 1200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 900px;
+}
+
+.go{
+    position: absolute;
+    top: 1600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 900px;
+}
+
+.vaca_title{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #ffffff;
+    font-size: 1.1em;
+    left: 0;
+}
+
+.school1{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    -webkit-filter: grayscale(100%);
+}
+
+.school2{
+    position: absolute;
+    left: 230px;
+    top: 40px;
+    -webkit-filter: grayscale(100%);
+}
+
+.school3{
+    position: absolute;
+    left: 460px;
+    top: 40px;
+    -webkit-filter: grayscale(100%);
+}
+
+.school4{
+    position: absolute;
+    left: 700px;
+    top: 40px;
+    -webkit-filter: grayscale(100%);
+}
+
+.school5{
+    position: absolute;
+    left: 0;
+    top: 40px;
+}
+
+.school6{
+    position: absolute;
+    left: 230px;
+    top: 40px;
+}
+
+.school7{
+    position: absolute;
+    left: 460px;
+    top: 40px;
+}
+
+.school8{
+    position: absolute;
+    left: 700px;
+    top: 40px;
+}
+button{
+    font-family: 'Noto Sans KR', sans-serif;
+    border: #ffffff 1px solid;
+    background: none;
+    color: #ffffff;
+    padding: 10px;
+    width: 200px;
+}
+
+button:hover{
+    font-family: 'Noto Sans KR', sans-serif;
+    border: #ffffff 1px solid;
+    background-color: #ffffff;
+    color: #272727;
+    padding: 10px;
+    width: 200px;
+}
+
+.reason{
+    position: absolute;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #ffffff;
+    top: 900px;
+    left: 50%;
+    font-size: 15pt;
+    transform: translate(-50%, -50%);
+}
+
+.logo{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

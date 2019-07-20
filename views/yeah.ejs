@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예약하기</title>
+    <link rel="stylesheet" href="yeah.css" />
+</head>
+<body>
+
+    <nav class="topmenu">
+            <ul>
+                <li class="home"><a href="/">개교기념</a></li>
+                <li><a href="/#bang">방학</a></li>
+                <li><a href="/#gae">개학</a></li>
+                <%if(!id){%>
+                <li><a href="login">로그인</a></li>
+                <li><a href="signup">회원가입</a></li>
+                <% } else { %>
+                <li><a href="logout">로그아웃</a></li>
+                <%}%>
+            </ul>
+    </nav>
+    
+    <form action="setReservation" method="POST">
+        <div class="black_box">
+            <div class="outorin">
+                <label> <input type="checkbox" class="option-input checkbox" name="out_or_in" value="실내">실내</label>
+                <label class="outoutout"> <input type="checkbox" class="option-input checkbox" name="out_or_in" value="실외">실외</label>
+            </div>
+
+            <div class="reservepeople">
+                <span>예약자</span> <hr>
+            </div>
+
+            <div class="nameandemail"> 
+                <input class="name_input" type="text" name="user_name" placeholder=" 이름" required>
+                <input class="email_input" type="email" name="user_email" placeholder=" 이메일" required value="<%=id%>">
+            </div>
+
+            <div class="reservepeople">
+                <span>예약</span> <hr>
+            </div>
+
+            <div class="nameandemail"> 
+                <input class="su_input" type="text" name="people" placeholder="   인원" required>&nbsp;명 &nbsp; &nbsp;
+                <input class="date_date" type="text" name="start_date" value="2019. 07. 06" >&nbsp;~&nbsp;<input class="date_date" type="text" name="end_date" value="2019. 07. 06" >
+            </div>
+
+            <div class="bang">
+                <div> 방1 </div>
+                <div> 방2 </div>
+                <div> 방3 </div>
+                <div> 방4 </div> <br>
+                <div> 방5 </div>
+                <div> 방6 </div>
+                <div> 방7 </div>
+                <div> 방8 </div>
+            </div>
+
+            <div class="reservepeople">
+                    <span>구매방법</span> <hr>
+            </div>
+
+            <div class="howbuy">
+                <div> 멤버쉽 </div>
+                <div> 신용카드 </div> <br>
+                <div> 문화상품권 </div>
+                <div> 무통장입금 </div>
+            </div>
+
+            <center><div class="div_login_btn"><input type="submit" value="예약완료" class="login_btn"></div></center>
+
+        </div>
+    </form>
+
+</body>
+</html>

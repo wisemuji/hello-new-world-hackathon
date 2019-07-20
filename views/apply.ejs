@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-AmhIy9r8DDmCs6gApucOEHaWOPeyKzE&callback=initMap"></script>
+    <link rel="stylesheet" href="apply.css" />
+</head>
+
+<body>
+
+    <nav class="topmenu">
+            <ul>
+                <li class="home"><a href="/">개교기념</a></li>
+                <li><a href="/#bang">방학</a></li>
+                <li><a href="/#gae">개학</a></li>
+                <%if(!id){%>
+                <li><a href="login">로그인</a></li>
+                <li><a href="signup">회원가입</a></li>
+                <% } else { %>
+                <li><a href="logout">로그아웃</a></li>
+                <%}%>
+            </ul>
+    </nav>
+
+    <button class="apply_btn">신청하기</button>
+    <form>
+        <div class="black_box">
+            <div class="explain">
+                <img src="pic/폐교4.jpg">
+                <div class="txt">이 학교는 2010년 1월 27일에 철거된 대구광역시 서구 내당동 467-2에 있는 학교입니다. 남부 교육청에 소속되어 있으며 자체 활용 중이기 때문에
+                    리모델링이 가능합니다.
+                    근처에 유명 프로그램에 방송된 맛집이 있으며, 하루에 약 100명이 이곳을 지나갑니다. 필요한 인원은 한 반당 2-3명 정도가 필요합니다. 모두 모두 와서 열심히 리모델링 한 뒤에
+                    유명한 맛집도 들렀다 가세요! 참고로 유명한 맛집은 예약을 해야 하지만 리모델링 작업자에 한하여 우선순위로 예약이 가능하니 참고 부탁드립니다.
+                </div>
+            </div>
+            <div class="near">
+                <span>주변시설</span>
+                <div id="map">
+                <hr>
+            </div>
+
+
+        </div>
+    </form>
+    <script>
+    window.onload = initMap;
+    function initMap() {
+        console.log('gk')
+    var latlng = new google.maps.LatLng(37.150367, 127.1786895);
+    var myOptions = {
+        zoom: 8,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"),
+            myOptions);
+}
+    </script>
+
+</body>
+
+</html>

@@ -34,7 +34,7 @@ module.exports = (app, Users) => {
         .get('/logout', (req, res) => {
             var result = req.session.destroy();
             res.clearCookie(config.key);
-            res.send(result)
+            res.send('<script type="text/javascript"> location.href = "/index";</script>');
         });
 
 };
